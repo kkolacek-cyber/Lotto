@@ -5,13 +5,12 @@
 }
 
 <h1>Loto 6/45</h1>
-<p>Vaši sretni brojevi:</p>
+<p>Odabrani brojevi:</p>
 
-<div class="d-flex gap-2 mb-3">
+<div>
     @foreach (var number in Model.Numbers)
-    {
-        <span class="badge rounded-pill bg-dark fs-4">@number</span>
+    { <span>@number</span>
     }
 </div>
 
-<a class="btn btn-secondary" asp-page="/Lotto6x45">Generiraj nove</a>
+<a class="btn" asp-page="/Lotto6x45">Generiraj nove</a>
