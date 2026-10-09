@@ -6,8 +6,6 @@ public static class LotteryGenerator
 
     public static List<int> GenerateNumbers(int count, int min, int max)
     {
-        if (count > max - min + 1)
-            throw new ArgumentException("Traženo je više brojeva nego što ih ima u rasponu.");
 
         var numbers = new HashSet<int>();
 

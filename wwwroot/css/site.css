@@ -1,81 +1,37 @@
 html {
     font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
     position: relative;
     min-height: 100%;
 }
 
-@media (min-width: 768px) {
-    html { font-size: 16px; }
-}
-
 body {
     margin-bottom: 60px;
-    background: linear-gradient(135deg, #eef2f7 0%, #dfe9f3 100%);
-    min-height: 100vh;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    line-height: 60px;
-    background-color: #fff;
+.form-floating>.form-control-plaintext::placeholder,
+.form-floating>.form-control::placeholder {
+    color: var(--bs-secondary-color);
+    text-align: end;
 }
 
-/* Kartice */
-.card-lotto {
-    border: none;
-    border-radius: 1rem;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.card-lotto:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
-}
-
-/* Hero */
-.hero {
-    text-align: center;
-    padding: 2.5rem 1rem;
-}
-
-.hero h1 {
-    font-weight: 800;
-}
-
-/* Loto kuglice */
-.balls {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    margin: 2rem 0;
-}
-
-.ball {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #fff;
-    box-shadow: inset -6px -8px 12px rgba(0, 0, 0, 0.25),
-                0 6px 12px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    animation: pop .5s ease forwards;
-    animation-delay: calc(var(--i) * 0.12s);
-}
-
-.ball-blue  { background: radial-gradient(circle at 30% 30%, #6ea8fe, #0d6efd 60%, #0a3d91); }
-.ball-green { background: radial-gradient(circle at 30% 30%, #75d9a3, #198754 60%, #0b4f30); }
-
-@keyframes pop {
-    0%   { opacity: 0; transform: scale(0.2) translateY(-30px); }
-    70%  { opacity: 1; transform: scale(1.15); }
-    100% { opacity: 1; transform: scale(1); }
+.form-floating>.form-control-plaintext:focus::placeholder,
+.form-floating>.form-control:focus::placeholder {
+    text-align: start;
 }

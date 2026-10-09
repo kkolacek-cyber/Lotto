@@ -4,18 +4,14 @@
     ViewData["Title"] = "Loto 7/39";
 }
 
-<div class="card card-lotto p-4 text-center">
-    <h1>Loto 7/39</h1>
-    <p class="text-muted">Vaša sretna kombinacija:</p>
+<h1>Loto 7/39</h1>
+<p>Vaši sretni brojevi:</p>
 
-    <div class="balls">
-        @foreach (var (number, i) in Model.Numbers.Select((n, i) => (n, i)))
-        {
-            <div class="ball ball-green" style="--i:@i">@number</div>
-        }
-    </div>
-
-    <div>
-        <a class="btn btn-success btn-lg" asp-page="/Lotto7x39">Generiraj nove</a>
-    </div>
+<div class="d-flex gap-2 mb-3">
+    @foreach (var number in Model.Numbers)
+    {
+        <span class="badge rounded-pill bg-dark fs-4">@number</span>
+    }
 </div>
+
+<a class="btn btn-secondary" asp-page="/Lotto7x39">Generiraj nove</a>
